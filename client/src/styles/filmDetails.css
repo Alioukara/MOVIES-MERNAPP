@@ -1,0 +1,30 @@
+img:not(#seeMore) {
+      -webkit-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-drag: none;
+}
+img:not(#seeMore) {
+    pointer-events: none;
+    height: 700px;
+}
+
+.details {
+justify-content: center;
+text-align: center;
+}
+#detailsTitle {
+    font-size:  6rem;
+    font-weight: bolder;
+}
+
+#cardbodyDetails {
+    color: rgb(125, 128, 131);
+}
+
+.commentsContainer {
+    border: solid grey 2px;
+    width: 30%;
+    
+
+}

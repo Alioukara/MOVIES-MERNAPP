@@ -1,0 +1,80 @@
+img:not(#seeMore) {
+      -webkit-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-drag: none;
+}
+img:not(#seeMore) {
+    pointer-events: none;
+
+}
+
+.movie_card{
+    padding: 0 !important;
+    width: 25rem;
+    margin:14px; 
+    border-radius: 10px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+}
+.movie_card img:not(#seeMore){
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 20rem;
+}
+.movie_info{
+    color: #9b9a9a;
+   
+}
+
+.card-title{
+    width: 80%;
+    height: 4rem;
+}
+.play_button{
+    /* background-color: #ff3d49; */
+       position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: 20px;
+    bottom: 111px;
+    font-size: 27px;
+    padding-left: 21px;
+    padding-top: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+/* #vote {
+    float: right;
+} */
+
+#seeMore {
+    float: right;
+}
+#allfilms {
+  background-color: rgb(0, 0, 0);
+  padding-top: 30px;
+}
+.card-body {
+    background-color: black;
+    align-items: center;
+
+
+}
+.card-title {
+    color: rgb(201, 204, 44);
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 30px;
+
+}
+#allcomments {
+    width: 60px;
+    height: 60px;
+}
+@media screen and (max-width: 1670px) {
+    #allfilms {
+        margin-left: 70px;
+    }
+}
