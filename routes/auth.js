@@ -25,7 +25,7 @@ const token = jwt.sign({user: body}, process.env.SECRET_KEY)
   // }
   user.password = undefined;
 
-  res.cookie('jwt', user);
+  res.cookie('jwt', token);
   res.send(user)
  
   
@@ -40,7 +40,8 @@ if(error) return res.status(400).send(error.details[0].message)
    
 // Checking if the user is already in the db
 let emailtest = req.body.email
-const emailExist = await User.findOne({emailtest})
+const emailExist = await User.findOne({email: emailtest})
+console.log(emailExist)
 if(emailExist) return res.status(400).send('Email already used')
 //createa nex User
 const hashedpassword = await bcrypt.hash(req.body.password, 10)

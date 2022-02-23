@@ -1,8 +1,5 @@
 const express = require('express');
-const dotenv = require('dotenv')
-const router = express.Router()
-const axios  = require('axios')
-const authorized = require('../util/verifyToken')
+
 const Comment = require('../model/comment');
 const jwt = require('jsonwebtoken')
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios'
 import "../styles/login.css"
 import Cookies from 'universal-cookie';
-import  { Redirect } from 'react-router-dom'
+
 import { useHistory } from "react-router-dom";
 
 
@@ -19,6 +19,8 @@ const Login = () => {
   axios.post('http://localhost:5000/api/login', {email, password}, { withCredentials: true })
     .then(function (response) {
       cookies.set('username', response.data.name);
+      cookies.set('userID', response.data._id);
+      console.log(response.data._id)
     console.log(response)
    
     setIsLoggedin(cookies.get('jwt'))
@@ -28,7 +30,7 @@ const Login = () => {
      
     })
     .catch(function (error) {
-     
+     console.log(error)
     });
     if(isLoggedin) {
       history.push('/dashboard')

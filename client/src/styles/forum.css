@@ -1,55 +1,19 @@
-.forum {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    /* height: 100vh; */
-    width: 90%;
-    max-width: 1200px;
-    text-align: center;
-}
-#message-container {
-    border: 1px solid black;
-    flex-grow: 1;
+#chat {
     overflow-y: auto;
-    width: 90vh;
-    height: 50vh;
-    background-color: rgb(38, 175, 175);
+}
+#chat::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #chat {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.forum-title {
+    text-align: center; 
     margin: auto auto;
+    color: aliceblue;
 
 }
-
-#message-container div {
-    background-color: #CCC;
-    padding: 5px;
-}
-#message-container p {
-    background-color: #008000;
-    padding: 5px;
-}
-#foruminput {
-    width: 50vh;
-    height: 5vh;
-    border-radius: 8%;
-}
-#forumlabel {
-    font-weight: bold;
-    margin-top: 2vh;
-
-    font-size: 25px;
-   
-}
-#form {
-    display:flex;
-    flex-direction: column;
-   
-}
-
-#forumbutton {
-    width: 20vh;
-    margin-top: 2vh;
-
-}
-
- #message-container p:nth-child(even) {background: rgb(207, 207, 207); text-align: right;}
- #message-container p:nth-child(odd) {background: white}

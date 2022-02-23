@@ -34,6 +34,8 @@ const Register = () => {
             "password": password
         });
 
+        console.log("data register",data)
+
         var config = {
             method: 'post',
             url: 'http://localhost:5000/api/register',

@@ -1,10 +1,9 @@
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import useLocalStorage from '../src/hooks/useLocalStorage';
+
 import Login from "./components/login";
 import Register from "./components/register";
 import Sidebar from "./components/sidebar";
@@ -23,8 +22,7 @@ const cookies = new Cookies();
 
 function App() {
 
-  //const [id, setId] = useLocalStorage('jwt')
-
+  
   const id =  cookies.get('jwt')
 
   return (
@@ -46,14 +44,7 @@ function App() {
       </SocketProvider>
       </Switch>
     </div>
-     
 
-
-       
-        
-       
-     
-      
     </Router>
    
    

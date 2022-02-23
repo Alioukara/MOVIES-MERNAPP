@@ -24,13 +24,21 @@ const io = require("socket.io")(server, {
   }
 })
 io.on('connection',  socket => {
- socket.on('message', async  ({ name, message }) => {
+  const id = socket.handshake.query.id
  
-   io.emit('message', {name, message})
-   const conversation = await new Conversation({ name, message })
+  socket.join(id)
+ 
+ socket.on('message', async  ({ name, message, userId }) => {
+  
+   io.emit('message', {name, message, userId})
+   const messageTime =   `${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()} <${new Date().getHours() + ":" + new Date().getMinutes()}>`
+   const conversation = await new Conversation({ name, message, userId, messageTime})
+
+  
   
  conversation.save()
- console.log("conversation",conversation)
+
+
  })
 
 })
@@ -44,6 +52,7 @@ const authRoute =  require('./routes/auth')
 const userRoutes =  require('./routes/userRoutes')
 const movieRoutes = require('./routes/moviesRoutes')
 const commentRoutes = require('./routes/commentsRoutes')
+const conversationRoutes = require('./routes/conversationRoutes')
 
 //Route Middlecares
 app.use('/api', authRoute)
@@ -51,6 +60,7 @@ app.use('/api/user', userRoutes)
 
 app.use('/', movieRoutes)
 app.use('/comments', commentRoutes)
+app.use('/conversations', conversationRoutes)
 
 
 const PORT = process.env.PORT || 5000;

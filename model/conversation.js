@@ -15,6 +15,15 @@ const ConversationSchema = new Schema({
   
     
   },
+
+  userId: {
+    type: String,
+  
+  },
+
+  messageTime: {
+    type: String,
+  }
  
 
 });
