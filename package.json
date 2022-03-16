@@ -2,7 +2,7 @@
   "name": "jwt-auth",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "cd client && npm run build",
     "start": "node app.js",
