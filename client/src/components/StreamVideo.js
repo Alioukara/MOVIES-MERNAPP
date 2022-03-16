@@ -12,7 +12,7 @@ import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
 
-const socket = io.connect(process.env.API-URL)
+const socket = io.connect("https://weloveallmovies.herokuapp.com")
 function App() {
 	const [ me, setMe ] = useState("")
 	const [ stream, setStream ] = useState()

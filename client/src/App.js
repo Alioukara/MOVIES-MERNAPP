@@ -43,7 +43,7 @@ function App() {
       <Route path="/filmdetails/:id"><FilmDetails /></Route>
       <SocketProvider id={id}>
       <Route path="/forum"><Forum id={id} /></Route>
-      <Route path="/streaming"><StreamVideo/></Route>
+      {/* <Route path="/streaming"><StreamVideo/></Route> */}
       </SocketProvider>
       </Switch>
     </div>
