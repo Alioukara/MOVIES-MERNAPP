@@ -120,7 +120,7 @@ socket.on("connections-counter", (callback) => {
 
 
 //Cors middleware
-app.use(cors({ credentials: true, origin: process.env.URL_ORIGIN }));
+app.use(cors({ credentials: true, origin: "https://weloveallmovies.herokuapp.com" }));
 
 //import Routes
 const authRoute =  require('./routes/auth')
