@@ -26,7 +26,7 @@ db.once('open', () => console.log('DB Connected'))
 
 const io = require("socket.io")(server, {
   cors: {
-  origin: ["http://localhost:3000",   "https://messageschat.weloveallmovies.com"]
+  origin: ["http://localhost:3000",   "https://weloveallmovies.herokuapp.com/"]
   }
 })
 
