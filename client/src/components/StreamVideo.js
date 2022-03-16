@@ -12,7 +12,7 @@ import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
 
-const socket = io.connect('http://localhost:5000')
+const socket = io.connect(process.env.API-URL)
 function App() {
 	const [ me, setMe ] = useState("")
 	const [ stream, setStream ] = useState()

@@ -72,7 +72,7 @@ const FilmDetails = () => {
 
         var config = {
             method: 'post',
-            url: 'http://localhost:5000/comments/newcomment',
+            url: `${process.env.API-URL}/comments/newcomment`,
             headers: {
                 'accesstoken': cookies.get("jwt"),
                 'Content-Type': 'application/json',

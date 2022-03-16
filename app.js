@@ -6,6 +6,7 @@ const server = require('http').Server(app)
 const Conversation = require('./model/conversation');
 const Connection = require('./model/connection');
 const cookieParser = require("cookie-parser");
+const path = require("path");
 const jwt = require('jsonwebtoken')
 /// for media
 const { Navigator } = require("node-navigator");
@@ -25,7 +26,7 @@ db.once('open', () => console.log('DB Connected'))
 
 const io = require("socket.io")(server, {
   cors: {
-  origin: ["http://localhost:3000",   /*"https://messageschat.herokuapp.com"*/]
+  origin: ["http://localhost:3000",   "https://messageschat.weloveallmovies.com"]
   }
 })
 
@@ -138,6 +139,12 @@ app.use('/comments', commentRoutes)
 app.use('/conversations', conversationRoutes)
 app.use('/connections', connectionsRoutes)
 
+// Step 1:
+app.use(express.static(path.resolve(__dirname, "./client/build")));
+// Step 2:
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+});
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {

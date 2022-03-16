@@ -38,7 +38,7 @@ const Register = () => {
 
         var config = {
             method: 'post',
-            url: 'http://localhost:5000/api/register',
+            url: process.env.API-URL + '/api/register',
             headers: { 
                'Content-Type': 'application/json'
               },

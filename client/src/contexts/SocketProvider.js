@@ -16,7 +16,7 @@ export function SocketProvider({children}) {
 
 	useEffect(
 		() => {
-			socketRef.current = io.connect("http://localhost:5000")
+			socketRef.current = io.connect(process.env.API-URL)
 			socketRef.current.on("message", ({ name, message }) => {
 				setChat([ ...chat, { name, message } ])
 			})

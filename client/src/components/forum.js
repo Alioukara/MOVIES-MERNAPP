@@ -66,7 +66,7 @@ function Forum({ id }) {
   useEffect(
     () => {
 
-      axios.get("http://localhost:5000/conversations/allmessages").then(res => {
+      axios.get(process.env.API-URL + "/conversations/allmessages").then(res => {
 
         setAllmessages(res.data)
 
@@ -80,7 +80,7 @@ function Forum({ id }) {
   useEffect(
     () => {
 
-      socketRef.current = io.connect("http://localhost:5000", { query: { id } })
+      socketRef.current = io.connect(process.env.API-URL, { query: { id } })
       socketRef.current.on("message", ({ name, message, userId }) => {
         setMessageDate(`${currentTime.getDate()}/${currentTime.getMonth() + 1}/${currentTime.getFullYear()} ${currentTime.getHours() + ":" + currentTime.getMinutes()}`)
         setChat([...chat, { name, message, userId, messageDate }])
