@@ -74,7 +74,7 @@ const FilmDetails = () => {
             method: 'post',
             url: 'https://weloveallmovies.herokuapp.com/comments/newcomment',
             headers: {
-                'auth-token': cookies.get("jwt"),
+                'auth-token': cookies.get("accesstoken"),
                 'Content-Type': 'application/json',
             },
             data: data
