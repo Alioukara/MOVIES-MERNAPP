@@ -74,13 +74,13 @@ const FilmDetails = () => {
 
         var config = {
             method: 'post',
-            url: 'https://weloveallmovies.herokuapp.com/comments/newcomment',
-            headers: {
-                'auth-token': `${cookies.get("accesstoken")}`,
-                'Content-Type': 'application/json',
+            url: 'http://localhost:5000/comments/newcomment',
+            headers: { 
+              'auth-token': cookies.get("accesstoken"), 
+              'Content-Type': 'application/json'
             },
-            data: data
-        };
+            data : data
+          };
 
         axios(config)
             .then((response) => {
