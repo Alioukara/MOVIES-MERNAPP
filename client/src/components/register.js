@@ -38,7 +38,7 @@ const Register = () => {
 
         var config = {
             method: 'post',
-            url: process.env.API-URL + '/api/register',
+            url: 'https://weloveallmovies.herokuapp.com/api/register',
             headers: { 
                'Content-Type': 'application/json'
               },

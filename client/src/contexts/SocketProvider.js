@@ -16,7 +16,7 @@ export function SocketProvider({children}) {
 
 	useEffect(
 		() => {
-			socketRef.current = io.connect(process.env.API-URL)
+			socketRef.current = io.connect("https://weloveallmovies.herokuapp.com")
 			socketRef.current.on("message", ({ name, message }) => {
 				setChat([ ...chat, { name, message } ])
 			})

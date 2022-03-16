@@ -72,7 +72,7 @@ const FilmDetails = () => {
 
         var config = {
             method: 'post',
-            url: `${process.env.API-URL}/comments/newcomment`,
+            url: 'https://weloveallmovies.herokuapp.com/comments/newcomment',
             headers: {
                 'accesstoken': cookies.get("jwt"),
                 'Content-Type': 'application/json',
