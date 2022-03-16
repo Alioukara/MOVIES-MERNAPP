@@ -2,7 +2,7 @@
       -webkit-user-drag: none;
       -moz-user-drag: none;
       -o-user-drag: none;
-      user-drag: none;
+     
 }
 .poster {
     pointer-events: none;
@@ -35,7 +35,7 @@
     height: 4rem;
 }
 .play_button{
-    /* background-color: #ff3d49; */
+  
     position: absolute;
     width: 60px;
     height: 60px;
@@ -48,9 +48,7 @@
     color: #FFFFFF;
     cursor: pointer;
 }
-/* #vote {
-    float: right;
-} */
+
 
 #seeMore {
     float: right;

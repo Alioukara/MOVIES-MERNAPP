@@ -2,7 +2,7 @@
       -webkit-user-drag: none;
       -moz-user-drag: none;
       -o-user-drag: none;
-      user-drag: none;
+    
 }
 .card-img-top {
     pointer-events: none;
@@ -28,15 +28,11 @@ text-align: center;
     
 
 }
-/* #comment::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
+
   #comment {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  } */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
 
   #talk-bubble {
       margin-bottom: 20px;

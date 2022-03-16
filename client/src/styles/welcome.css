@@ -1,5 +1,4 @@
-/* Your styles (and Sass) start here */
-/*** Example styles ***/
+
 
   
   #titlehome {
@@ -23,8 +22,7 @@
   
   #titlehome:hover {
     color: #5cefaf; }
-  
-  /*** Keyframes - used with the "animation" property in the h1 ***/
+ 
   @-webkit-keyframes pulsate {
     0%, 20% {
       -webkit-transform: translate(-50%, -50%) scale(1);
@@ -58,7 +56,7 @@
       -webkit-filter: blur(5px);
               filter: blur(5px); } }
   
-  /*** Media queries for adjusting to different screen sizes ***/
+
   @media only screen and (max-width: 600px) {
     h1 {
       font-size: 2em; } }

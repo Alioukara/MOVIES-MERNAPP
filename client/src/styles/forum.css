@@ -8,10 +8,10 @@
     display: none;
   }
   
-  /* Hide scrollbar for IE, Edge and Firefox */
+
   #chat {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
   }
 
 .forum-title {
@@ -22,7 +22,7 @@
 }
 
 
-/*emoji picker */
+
 
 .picker-container button {
   height: 20px;
@@ -43,7 +43,6 @@ section {
 
 
 
-/* CSS talk bubble */
 .talk-bubble {
 	margin: 0px;
   display: inline-block;
@@ -74,7 +73,6 @@ section {
 
 
 
-/* Right triangle, left side slightly down */
 
 .tri-right.left-in:after{
 	content: ' ';
@@ -115,14 +113,13 @@ section {
 }
 
 
-/* talk bubble contents */
 .talktext{
   padding: 1em;
 	text-align: left;
   line-height: 1.5em;
 }
 .talktext p{
-  /* remove webkit p margins */
+ 
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
 }
