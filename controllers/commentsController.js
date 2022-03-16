@@ -22,7 +22,9 @@ exports.postComment = async (req, res, next) => {
       res.send("Your comment is empty!!");
     }
   const id = jwt.verify(req.header('auth-token'), process.env.SECRET_KEY).user._id
+  console.Log(id)
     const userName = jwt.verify(req.header('auth-token'), process.env.SECRET_KEY).user.username
+    console.Log(userName)
     const { body, username = userName, filmsId, userId = id, commentTime} = req.body;
     
     const newComment = await Comment.create({
@@ -33,7 +35,7 @@ exports.postComment = async (req, res, next) => {
         commentTime
       });
   
-    console.log(newComment);
+  
   
     res.status(201).json({
       status: 'success',
