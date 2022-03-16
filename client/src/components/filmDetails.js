@@ -70,11 +70,13 @@ const FilmDetails = () => {
             commentTime: commentDate
         });
 
+        console.log("data", data)
+
         var config = {
             method: 'post',
             url: 'https://weloveallmovies.herokuapp.com/comments/newcomment',
             headers: {
-                'auth-token': cookies.get("accesstoken"),
+                'auth-token': `${cookies.get("accesstoken")}`,
                 'Content-Type': 'application/json',
             },
             data: data
