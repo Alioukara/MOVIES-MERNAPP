@@ -22,7 +22,12 @@ const CommentSchema = new Schema({
   userId: {
     type: String,
     required: true,
-  }
+  },
+
+  commentTime: {
+    type: String,
+    required: true,
+  },
 
 });
 

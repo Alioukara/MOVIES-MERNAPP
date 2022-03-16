@@ -12,18 +12,20 @@ import Dashboard from "./components/dashboard"
 import AllFilms from "./components/allFilms"
 import FilmDetails from "./components/filmDetails";
 import Forum from "./components/forum";
+import StreamVideo from "./components/StreamVideo";
 import { SocketProvider } from '../src/contexts/SocketProvider';
 
 import './App.css';
 
 import Cookies from 'universal-cookie';
+import { useState } from "react";
  
 const cookies = new Cookies();
 
 function App() {
 
-  
-  const id =  cookies.get('jwt')
+ 
+  const id =  cookies.get('accesstoken')
 
   return (
   
@@ -41,6 +43,7 @@ function App() {
       <Route path="/filmdetails/:id"><FilmDetails /></Route>
       <SocketProvider id={id}>
       <Route path="/forum"><Forum id={id} /></Route>
+      <Route path="/streaming"><StreamVideo/></Route>
       </SocketProvider>
       </Switch>
     </div>

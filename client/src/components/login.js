@@ -4,6 +4,7 @@ import "../styles/login.css"
 import Cookies from 'universal-cookie';
 
 import { useHistory } from "react-router-dom";
+import axiosClient from "../Apis/api"
 
 
 const cookies = new Cookies();
@@ -15,26 +16,24 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
- 
-  axios.post('http://localhost:5000/api/login', {email, password}, { withCredentials: true })
-    .then(function (response) {
-      cookies.set('username', response.data.name);
-      cookies.set('userID', response.data._id);
-      console.log(response.data._id)
+    axiosClient.post('api/login', {email, password})
+  .then(response => {
+    // cookies.set('username', response.data.name);
+    // cookies.set('userID', response.data._id);
     console.log(response)
-   
-    setIsLoggedin(cookies.get('jwt'))
-    
-     history.push('/dashboard')
-     window.location.reload(false);
-     
-    })
-    .catch(function (error) {
-     console.log(error)
-    });
-    if(isLoggedin) {
-      history.push('/dashboard')
-    }
+
+  setIsLoggedin(cookies.get('accesstoken'))
+  
+   history.push('/dashboard')
+   window.location.reload(false);
+})
+.catch( (error) => {
+  console.log(error)
+ });
+ if(isLoggedin) {
+   history.push('/dashboard')
+ }
+ 
   }
  
 

@@ -8,7 +8,7 @@ const commentsController = require('../controllers/commentsController');
 router.route('/:movieId')
   .get(commentsController.getMovieComments)
 
-  router.route('/newcomment', authorized)
+  router.route('/newcomment')
   .post(commentsController.postComment)
 
 

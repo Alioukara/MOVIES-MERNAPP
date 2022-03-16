@@ -1,10 +1,10 @@
-img:not(#seeMore) {
+.card-img-top {
       -webkit-user-drag: none;
       -moz-user-drag: none;
       -o-user-drag: none;
       user-drag: none;
 }
-img:not(#seeMore) {
+.card-img-top {
     pointer-events: none;
     height: 700px;
 }
@@ -14,7 +14,7 @@ justify-content: center;
 text-align: center;
 }
 #detailsTitle {
-    font-size:  6rem;
+    font-size:  4rem;
     font-weight: bolder;
 }
 
@@ -28,3 +28,18 @@ text-align: center;
     
 
 }
+/* #comment::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #comment {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  } */
+
+  #talk-bubble {
+      margin-bottom: 20px;
+      border-radius: 10px 100px / 120px;
+      margin: 20px auto;
+  }

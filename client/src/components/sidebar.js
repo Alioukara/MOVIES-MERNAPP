@@ -10,20 +10,21 @@ function Sidebar() {
 
   const logOut = () => {
 
-    cookies.remove('jwt');
+    cookies.remove('accesstoken', "userID");
+    cookies.remove("userID");
     cookies.remove('username');
     history.push('/welcome')
     window.location.reload(false);
 
   };
-  const isLoggedin = cookies.get('jwt')
-    return   isLoggedin ? (
+  const isLoggedin = cookies.get('accesstoken')
+  return isLoggedin ? (
     <main className="main">
       <aside className="sidebar">
         <nav className="nav">
           <ul>
             <li className="active"><a href="/films">Films</a></li>
-            
+
             <li className="active"><a href="/dashboard">Dashboard</a></li>
             <li className="active"><a href="/forum">Forum</a></li>
             <li className="active"><a href="#" onClick={logOut}>Logout</a></li>
@@ -31,10 +32,10 @@ function Sidebar() {
           </ul>
         </nav>
       </aside>
-    
-  </main> 
-        
-    ) :     <main className="main">
+
+    </main>
+
+  ) : <main className="main">
     <aside className="sidebar">
       <nav className="nav">
         <ul>
@@ -45,8 +46,8 @@ function Sidebar() {
         </ul>
       </nav>
     </aside>
-  
-</main> ;
+
+  </main>;
 }
 
 export default Sidebar;

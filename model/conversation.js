@@ -23,6 +23,10 @@ const ConversationSchema = new Schema({
 
   messageTime: {
     type: String,
+  },
+
+  url: {
+    type: String,
   }
  
 

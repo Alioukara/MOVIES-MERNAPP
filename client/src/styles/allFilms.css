@@ -1,23 +1,23 @@
-img:not(#seeMore) {
+.poster {
       -webkit-user-drag: none;
       -moz-user-drag: none;
       -o-user-drag: none;
       user-drag: none;
 }
-img:not(#seeMore) {
+.poster {
     pointer-events: none;
 
 }
 
 .movie_card{
     padding: 0 !important;
-    width: 25rem;
+    width: 20rem;
     margin:14px; 
     border-radius: 10px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
     border: none;
 }
-.movie_card img:not(#seeMore){
+.movie_card .poster{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 20rem;
@@ -26,14 +26,17 @@ img:not(#seeMore) {
     color: #9b9a9a;
    
 }
-
+.movie_card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 .card-title{
     width: 80%;
     height: 4rem;
 }
 .play_button{
     /* background-color: #ff3d49; */
-       position: absolute;
+    position: absolute;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -55,12 +58,11 @@ img:not(#seeMore) {
 #allfilms {
   background-color: rgb(0, 0, 0);
   padding-top: 30px;
+  
 }
 .card-body {
     background-color: black;
     align-items: center;
-
-
 }
 .card-title {
     color: rgb(201, 204, 44);

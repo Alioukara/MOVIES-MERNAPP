@@ -6,7 +6,11 @@ const server = require('http').Server(app)
 const Conversation = require('./model/conversation');
 const Connection = require('./model/connection');
 const cookieParser = require("cookie-parser");
-
+const jwt = require('jsonwebtoken')
+/// for media
+const { Navigator } = require("node-navigator");
+const navigator = new Navigator();
+///
 
 //eg: to be able to read req.body 
 app.use(express.json())
@@ -24,20 +28,15 @@ const io = require("socket.io")(server, {
   origin: ["http://localhost:3000",   /*"https://messageschat.herokuapp.com"*/]
   }
 })
-var count = []
+
 io.on('connection',  socket => {
   const id = socket.handshake.query.id
-
+  
  //get the number of connection way1 (ps: socket io provid a better way to get numver of connected client)
   // const newConnection = new Connection({ id})
   // newConnection.save()
-
  
-
-  socket.join(id)
  
-
-
  socket.on('message', async  ({ name, message, userId }) => {
   
    io.emit('message', {name, message, userId})
@@ -55,6 +54,13 @@ socket.on("connections-counter", (callback) => {
     const count = io.of("/").sockets.size 
   callback(count)
   })
+  socket.on('audio',  async ({name, message, userId, recorderData}) => {
+    const url = recorderData.audioDetails.url
+
+    console.log("message sent")
+    
+      // can choose to broadcast it to whoever you want
+       io.emit('audio', {name, message, userId, url})
 
  socket.on("disconnect", () => {
    try {
@@ -69,7 +75,47 @@ socket.on("connections-counter", (callback) => {
    }
 });
 
+
+
+
+    //save messages in db but we can't retreive the audio here because we have to stock the file in a cloud for exemple */}
+    const messageTime =   `${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()} ${new Date().getHours() + ":" + new Date().getMinutes()}`
+    const conversation = await new Conversation({ name, message, userId, messageTime, url})
+    
+
+    conversation.save()
+  
+});
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Cors middleware
