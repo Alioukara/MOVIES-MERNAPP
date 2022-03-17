@@ -99,7 +99,7 @@ const FilmDetails = () => {
     return (
         <div style={{ textAlign: "center", justifyContent: "center", marginLeft: "10%" }}>
             <h1 id="detailsTitle">{filmdetails.title}</h1>
-            <div /*className="details"*/ className="row no-gutters">
+            <div id="filmDetails" className="row no-gutters">
 
 
                 <div className=" container justify-content-center col">

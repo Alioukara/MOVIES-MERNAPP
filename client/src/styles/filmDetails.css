@@ -1,41 +1,53 @@
 .card-img-top {
-      -webkit-user-drag: none;
-      -moz-user-drag: none;
-      -o-user-drag: none;
-    
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
 }
 .card-img-top {
-    pointer-events: none;
-    height: 700px;
+  pointer-events: none;
+  height: 700px;
 }
 
-.details {
+#filmDetails {
 justify-content: center;
 text-align: center;
 }
 #detailsTitle {
-    font-size:  4rem;
-    font-weight: bolder;
+  font-size:  4rem;
+  font-weight: bolder;
 }
 
 #cardbodyDetails {
-    color: rgb(125, 128, 131);
+  color: rgb(125, 128, 131);
 }
 
 .commentsContainer {
-    border: solid grey 2px;
-    width: 30%;
-    
+  border: solid grey 2px;
+  width: 30%;
+  
 
 }
+/* #comment::-webkit-scrollbar {
+  display: none;
+}
 
-  #comment {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-  }
+/* Hide scrollbar for IE, Edge and Firefox */
+#comment {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} */
 
-  #talk-bubble {
-      margin-bottom: 20px;
-      border-radius: 10px 100px / 120px;
-      margin: 20px auto;
+#talk-bubble {
+    margin-bottom: 20px;
+    border-radius: 10px 100px / 120px;
+    margin: 20px auto;
+}
+
+
+@media screen and (max-width: 1000px) {
+  #filmDetails {
+     display: block;
+      
   }
+}
