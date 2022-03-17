@@ -37,7 +37,7 @@ function App() {
      
       <Route path="/login"><Login /></Route>
       <Route path="/register"><Register /></Route>
-      <Route path="/welcome"><Welcome /></Route>
+      <Route path="/"><Welcome /></Route>
       <Route path="/dashboard"><Dashboard /></Route>
       <Route path="/films"><AllFilms /></Route>
       <Route path="/filmdetails/:id"><FilmDetails /></Route>
