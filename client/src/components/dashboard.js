@@ -1,12 +1,13 @@
 import React from 'react';
 import Cookies from 'universal-cookie';
 import '../styles/dashboard.css'
+import AcessDenied from './modals/acessDenied'
 
 const cookies = new Cookies();
-function dashboard(props) {
-      
+function dashboard() {
+    const logged = cookies.get("accesstoken")     
 
-    return (
+    return ( logged != undefined ?
         <div id="dashboard" className="container d-flex justify-content-center align-items-center">
         <div className="card">
             <div className="upper"> <img id="img1" src="https://i.imgur.com/Qtrsrk5.jpg" className="img-fluid" /> </div>
@@ -26,7 +27,9 @@ function dashboard(props) {
                 </div>
             </div>
         </div>
-    </div>
+    </div> : (<div style={{ display: 'grid', placeItems: "center", fontSize: '3rem' }}>
+      <AcessDenied />
+    </div>)
     );
 }
 
