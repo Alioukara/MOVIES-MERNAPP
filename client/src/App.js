@@ -32,7 +32,7 @@ function App() {
    
     <Router>
       <Sidebar />
-    <div>
+
       <Switch>
      
       <Route  path="/login"><Login /></Route>
@@ -46,7 +46,7 @@ function App() {
       {/* <Route path="/streaming"><StreamVideo/></Route> */}
       </SocketProvider>
       </Switch>
-    </div>
+    
 
     </Router>
    

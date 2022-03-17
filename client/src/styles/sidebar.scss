@@ -71,22 +71,29 @@ html {
     height: 5rem;
     position: relative;
     align-items: center;
+    justify-content: center;
   }
   .sidebar ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
     height: 5rem;
     margin: auto auto;
+    padding: 5px;
+
+   
   }
   .sidebar ul li {
-    font-size: 10px;
-    margin-right: 30px;
+    font-size: 8px;
+    margin-right: 20px;
+
+    
   }
   .nav {
        margin: 0 0;
        text-align: center;
 
   }
+
 }
