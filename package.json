@@ -12,7 +12,6 @@
     "client": "cd client && npm start",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
-   
     "debug": "ndb app.js"
   },
   "author": "",
@@ -22,6 +21,7 @@
     "axios": "^0.25.0",
     "bcrypt": "^5.0.1",
     "bootstrap-icons": "^1.8.1",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",

@@ -13,7 +13,7 @@ function Sidebar() {
     cookies.remove('accesstoken', "userID");
     cookies.remove("userID");
     cookies.remove('username');
-    history.push('/welcome')
+    history.push('/')
     window.location.reload(false);
 
   };

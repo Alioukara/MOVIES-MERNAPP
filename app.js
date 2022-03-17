@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv')
 const app = express()
+const compression = require('compression');
 const server = require('http').Server(app)
 const Conversation = require('./model/conversation');
 const Connection = require('./model/connection');
@@ -23,6 +24,8 @@ mongoose.connect(process.env.DB_CONNECT)
 const db = mongoose.connection
 db.on('error', (error) => console.log(error))
 db.once('open', () => console.log('DB Connected'))
+
+app.use(compression());
 
 const io = require("socket.io")(server, {
   cors: {

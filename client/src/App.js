@@ -12,13 +12,13 @@ import Dashboard from "./components/dashboard"
 import AllFilms from "./components/allFilms"
 import FilmDetails from "./components/filmDetails";
 import Forum from "./components/forum";
-import StreamVideo from "./components/StreamVideo";
+
 import { SocketProvider } from '../src/contexts/SocketProvider';
 
 import './App.css';
 
 import Cookies from 'universal-cookie';
-import { useState } from "react";
+
  
 const cookies = new Cookies();
 
