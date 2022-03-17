@@ -4,7 +4,7 @@ import "../styles/welcome.css"
 function welcome() {
     return (
         <div className="welcome">
-        <h1 id='titlehome'>WELCOME <br/>To I Love Films</h1>
+        <h1 id='titlehome'>WELCOME <br/>To We Love All Movies</h1>
 
 
 
