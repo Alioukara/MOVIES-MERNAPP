@@ -42,9 +42,10 @@ function App() {
       <Route path="/dashboard"><Dashboard /></Route>
       <Route path="/films"><AllFilms /></Route>
       <Route path="/filmdetails/:id"><FilmDetails /></Route>
+      <Route path="/contact"><ContactUs /></Route>
       <SocketProvider id={id}>
       <Route path="/forum"><Forum id={id} /></Route>
-      <Route path="/contact"><ContactUs /></Route>
+     
       </SocketProvider>
       </Switch>
     
