@@ -15,7 +15,7 @@ const AllFilms = () => {
       axiosClient.get('movies/' + pageNum)
       .then((response) => {
         setFilms(response.data.results);
-        console.log(response)
+      
         
          
 
