@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios'
 import "../styles/register.css"
-
+import { Error, YesRegister } from './modals/notification.js'
 
 const Register = () => {
     const [name, setName] = useState("")
@@ -46,11 +46,12 @@ const Register = () => {
         };
 
         axios(config)
-            .then(function (response) {
-                console.log(JSON.stringify(response.data));
+            .then((response) => {
+               
+                YesRegister()
             })
-            .catch(function (error) {
-                console.log(error);
+            .catch((error) => {
+                Error()
             });
     }
 

@@ -5,6 +5,7 @@ import Cookies from 'universal-cookie';
 
 import { useHistory } from "react-router-dom";
 import axiosClient from "../Apis/api"
+import { Nologin, Yeslogin } from './modals/notification.js'
 
 
 const cookies = new Cookies();
@@ -20,7 +21,7 @@ const Login = () => {
   .then(response => {
     // cookies.set('username', response.data.name);
     // cookies.set('userID', response.data._id);
-    console.log(response)
+    Yeslogin()
 
   setIsLoggedin(cookies.get('accesstoken'))
   
@@ -28,7 +29,7 @@ const Login = () => {
    window.location.reload(false);
 })
 .catch( (error) => {
-  console.log(error)
+  Nologin()
  });
  if(isLoggedin) {
    history.push('/dashboard')
