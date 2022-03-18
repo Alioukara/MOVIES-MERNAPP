@@ -2,6 +2,7 @@ import React from 'react';
 import "../styles/sidebar.scss"
 import Cookies from 'universal-cookie';
 import { useHistory } from "react-router-dom";
+import { Logout } from './modals/notification.js'
 
 const cookies = new Cookies();
 
@@ -14,6 +15,7 @@ function Sidebar() {
     cookies.remove("userID");
     cookies.remove('username');
     history.push('/')
+    Logout()
     window.location.reload(false);
 
   };
@@ -28,7 +30,7 @@ function Sidebar() {
             <li className="active"><a href="/dashboard">Dashboard</a></li>
             <li className="active"><a href="/forum">Forum</a></li>
             <li className="active"><a href="#" onClick={logOut}>Logout</a></li>
-            <li className="active"><a href="#">Contact</a></li>
+            <li className="active"><a href="/contact">Contact</a></li>
           </ul>
         </nav>
       </aside>
