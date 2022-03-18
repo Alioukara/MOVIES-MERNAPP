@@ -12,6 +12,7 @@ import Dashboard from "./components/dashboard"
 import AllFilms from "./components/allFilms"
 import FilmDetails from "./components/filmDetails";
 import Forum from "./components/forum";
+import ContactUs from "./components/ContactUs";
 
 import { SocketProvider } from '../src/contexts/SocketProvider';
 
@@ -43,7 +44,7 @@ function App() {
       <Route path="/filmdetails/:id"><FilmDetails /></Route>
       <SocketProvider id={id}>
       <Route path="/forum"><Forum id={id} /></Route>
-      {/* <Route path="/streaming"><StreamVideo/></Route> */}
+      <Route path="/contact"><ContactUs /></Route>
       </SocketProvider>
       </Switch>
     

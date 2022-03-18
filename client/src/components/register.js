@@ -49,6 +49,9 @@ const Register = () => {
             .then((response) => {
                
                 YesRegister()
+            }).then(() => {
+                history.push('/login')
+                window.location.reload(false);
             })
             .catch((error) => {
                 Error()

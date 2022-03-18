@@ -42,7 +42,7 @@ function Sidebar() {
           <li className="active"><a href="/welcome">Welcome</a></li>
           <li className="active"><a href="/login">Login</a></li>
           <li className="active"><a href="/register">Register</a></li>
-          <li className="active"><a href="#">Contact</a></li>
+          <li className="active"><a href="/contact">Contact</a></li>
         </ul>
       </nav>
     </aside>
