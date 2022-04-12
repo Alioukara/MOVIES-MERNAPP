@@ -1,3 +1,7 @@
+###Deployed APP on:
+https://weloveallmovies.herokuapp.com/
+
+
 ## IMPORTANT NOTE
 This project does not have a mongoDB connection setup. Setup the connection based on the environments below.
 
