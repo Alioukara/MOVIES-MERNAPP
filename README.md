@@ -2,13 +2,13 @@
 This project does not have a mongoDB connection setup. Setup the connection based on the environments below.
 
 local development: create a config file (make sure to name it .env), which exports:  
-DB_CONNECT ->  add your MongoDB URI, local or Atlas
-SECRET_KEY -> create a secret key for yout jwt
-JWT_COOKIE_EXPIRES_IN -> limit for jwt cookie
-JWT_EXPIRES_IN= limit for jwt
-API_KEY= add the api key that you will have from TMBD API
-URL_ORIGIN=http://localhost:3000
-PORT=5000
+DB_CONNECT ->  add your MongoDB URI, local or Atlas.<br>
+SECRET_KEY -> create a secret key for your jwt.<br>
+JWT_COOKIE_EXPIRES_IN -> limit for jwt cookie.<br>
+JWT_EXPIRES_IN= limit for jwt.<br>
+API_KEY= add the api key that you will have from TMBD API.<br>
+URL_ORIGIN=http://localhost:3000<br>
+PORT=5000.<br>
 
 
 This file will be ignored by git so your db credentials will be kept safe when the app is deployed.
